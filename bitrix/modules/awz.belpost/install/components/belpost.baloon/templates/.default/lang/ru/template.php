@@ -1,0 +1,5 @@
+<?php
+$MESS["AWZ_BELPOST_BALOON_ADR"] = "Адрес";
+$MESS["AWZ_BELPOST_BALOON_PHONE"] = "Телефон";
+$MESS["AWZ_BELPOST_BALOON_TIME"] = "Время работы";
+$MESS["AWZ_BELPOST_BALOON_CHOISE"] = "Выбрать";
