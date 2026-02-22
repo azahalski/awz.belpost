@@ -1,0 +1,27 @@
+<?php
+$MESS["AWZ_BELPOST_PROFILE_PICKUP_NAME"] = "AWZ: Отделения Белпочты";
+$MESS["AWZ_BELPOST_PROFILE_PICKUP_DESC"] = "Обработчик доставки в Отделения Белпочты Беларусь";
+$MESS["AWZ_BELPOST_PROFILE_PICKUP_SETT_INTG"] = "Интеграция";
+$MESS["AWZ_BELPOST_PROFILE_PICKUP_SETT_INTG_DESC"] = "Основные настройки интеграции";
+$MESS["AWZ_BELPOST_PROFILE_PICKUP_SETT_BTN_CLASS"] = "Класс кнопки выбора ПВЗ";
+$MESS["AWZ_BELPOST_PROFILE_PICKUP_SETT_WEIGHT_DEF"] = "Вес товара в граммах по умолчанию (если не найден вес товара)";
+$MESS["AWZ_BELPOST_PROFILE_PICKUP_BTN_OPEN"] = "Выберите отделение";
+$MESS["AWZ_BELPOST_PROFILE_PICKUP_ERR_REGION"] = "Не указан регион доставки";
+$MESS["AWZ_BELPOST_PROFILE_PICKUP_TARIFS"] = "Опции к тарифам";
+$MESS["AWZ_BELPOST_PROFILE_PICKUP_TARIFS_WEIGHT"] = "Тарифы по весу";
+$MESS["AWZ_BELPOST_PROFILE_PICKUP_TARIFS_ERR"] = "Стоимость доставки не рассчитана";
+$MESS["AWZ_BELPOST_PROFILE_PICKUP_TARIFS_DESC"] = "Доп опции к тарифам на доставку";
+$MESS["AWZ_BELPOST_PROFILE_PICKUP_TARIFS_WEIGHT_DESC"] = "Тарифы на доставку по весу";
+$MESS["AWZ_BELPOST_PROFILE_PICKUP_TARIF_NUMS"] = "от #FROM# до #TO# кг.";
+$MESS["AWZ_BELPOST_PROFILE_PICKUP_TARIF_NDS1"] = "Добавить НДС 20% к тарифам";
+$MESS["AWZ_BELPOST_PROFILE_PICKUP_TARIF_NDS2"] = "Добавить НДС 20% к плате за объявленную ценность";
+$MESS["AWZ_BELPOST_PROFILE_PICKUP_TARIF_NP"] = "Добавить плату за объявленную ценность (3%)";
+$MESS["AWZ_BELPOST_PROFILE_PICKUP_TARIF_ADD"] = "Добавить фиксированную сумму к финальной стоимости рассчитанной доставки";
+$MESS["AWZ_BELPOST_PROFILE_PICKUP_TARIF_MAXW"] = "Максимальный вес посылки, кг.";
+$MESS["AWZ_BELPOST_PROFILE_PICKUP_TARIFS_ERR_MAXW"] = "Превышен максимальный вес посылки";
+$MESS["AWZ_BELPOST_PROFILE_PICKUP_MAIN_SHOW_ALL"] = "Показывать все ПВЗ, если ПВЗ не найдены в переданном местоположении";
+$MESS["AWZ_BELPOST_PROFILE_PICKUP_MAIN_API_COST"] = "Брать тарифы с";
+$MESS["AWZ_BELPOST_PROFILE_PICKUP_MAIN_API_COST_Y"] = "Подтверждаю согласие на";
+$MESS["AWZ_BELPOST_PROFILE_PICKUP_MAIN_API_COST_N"] = "настроек профиля доставки";
+$MESS["AWZ_BELPOST_PROFILE_PICKUP_MAIN_API_COST_FL"] = "тарифы для физ. лиц с zahalski.dev";
+$MESS["AWZ_BELPOST_PROFILE_PICKUP_MAIN_API_COST_UL"] = "тарифы для юр. лиц с zahalski.dev";
