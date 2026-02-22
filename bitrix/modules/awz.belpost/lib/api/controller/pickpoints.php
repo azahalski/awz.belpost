@@ -159,8 +159,6 @@ class pickPoints extends Controller
 
         $items = array();
 
-        $address = 'BY';
-
         $filterPvz = array('=TOWN'=>$address);
         if($address === self::DEF_COUNTRY) $filterPvz = array();
 

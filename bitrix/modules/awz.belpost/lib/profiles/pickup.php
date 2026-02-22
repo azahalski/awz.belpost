@@ -5,6 +5,7 @@ use Awz\Belpost\Handler;
 use Awz\Belpost\Helper;
 use Awz\Belpost\PvzTable;
 use Bitrix\Main\Application;
+use Bitrix\Main\Config\Option;
 use Bitrix\Main\Context;
 use Bitrix\Main\Localization\Loc;
 use Bitrix\Main\Result;
@@ -101,11 +102,11 @@ class Pickup extends \Bitrix\Sale\Delivery\Services\Base
                         "NAME" => Loc::getMessage('AWZ_BELPOST_PROFILE_PICKUP_SETT_WEIGHT_DEF'),
                         "DEFAULT" => '3000'
                     ),
-                    'SHOW_ALL' => array(
+                    /*'SHOW_ALL' => array(
                         'TYPE' => 'Y/N',
                         "NAME" => Loc::getMessage('AWZ_BELPOST_PROFILE_PICKUP_MAIN_SHOW_ALL'),
                         "DEFAULT" => 'Y'
-                    ),
+                    ),*/
                     'API_COST' => array(
                         'TYPE' => 'ENUM',
                         'OPTIONS'=>[
@@ -207,7 +208,7 @@ class Pickup extends \Bitrix\Sale\Delivery\Services\Base
         $weight = $shipment->getWeight();
         if(!$weight) $weight = $config['MAIN']['WEIGHT_DEFAULT'];
 
-        $maxWeight = $config['TARIFS']['TARIF_MAXW'];
+        $maxWeight = (float)$config['TARIFS']['TARIF_MAXW'] * 1000;
 
         if($weight > $maxWeight){
             $result->addError(new \Bitrix\Main\Error(
@@ -265,7 +266,10 @@ class Pickup extends \Bitrix\Sale\Delivery\Services\Base
         }
 
         $rCheck = PvzTable::checkPvzFromTown($locationName);
-        if(!$rCheck->isSuccess() && $config['MAIN']['SHOW_ALL']=='Y'){
+        if(
+            !$rCheck->isSuccess()
+            && (Option::get("awz.belpost", "SHOW_ALL_PVZ_".$this->getId(), "Y", "")=='Y')
+        ){
             $rCheck = new Result();
             $locationName = static::DEF_COUNTRY_CODE;
         }
@@ -283,8 +287,8 @@ class Pickup extends \Bitrix\Sale\Delivery\Services\Base
             }
 
             foreach (static::WEIGHTS as $weightConfig){
-                $k = preg_replace('/([^0-9])/is','',$weight[0]).
-                    '_'.preg_replace('/([^0-9])/is','',$weight[1]);
+                $k = preg_replace('/([^0-9])/is','',$weightConfig[0]).
+                    '_'.preg_replace('/([^0-9])/is','',$weightConfig[1]);
                 if(
                     ($weight > $weightConfig[0]*1000)
                     && ($weight <= $weightConfig[1]*1000)
@@ -297,7 +301,7 @@ class Pickup extends \Bitrix\Sale\Delivery\Services\Base
                     }
                     if(!$tarif_detail) continue;
 
-                    $price = round((float)$config['TARIFS_WEIGHT'][$k],2);
+                    $price = round((float)$tarif_detail,2);
                 }
             }
 

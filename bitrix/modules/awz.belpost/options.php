@@ -259,7 +259,7 @@ $tabControl->BeginNextTab();
             <tr>
                 <td><?=Loc::getMessage('AWZ_BELPOST_OPT_L_PROPPVZ_ADR_TMPL')?></td>
                 <td>
-                    <?$val = Option::get($module_id, "PVZ_ADDRESS_TMPL_".$profileId, "#NAME#", "");?>
+                    <?$val = Option::get($module_id, "PVZ_ADDRESS_TMPL_".$profileId, "#ADDRESS#", "");?>
                     <input type="text" size="35" maxlength="255" value="<?=$val?>" name="PVZ_ADDRESS_TMPL_<?=$profileId?>"/>
                     <p><?=Loc::getMessage('AWZ_BELPOST_OPT_L_PROPPVZ_ADR_TMPL_DESC')?></p>
                 </td>

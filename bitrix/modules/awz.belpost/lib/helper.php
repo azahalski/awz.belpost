@@ -186,10 +186,13 @@ class Helper {
 
         if(empty($pointData)) return '';
 
-        $template = Option::get(Handler::MODULE_ID, "PVZ_ADDRESS_TMPL_".$profileId, "#NAME#", "");
+        $template = Option::get(Handler::MODULE_ID, "PVZ_ADDRESS_TMPL_".$profileId, "#ADDRESS#", "");
         $templateData = array(
             '#ID#'=>$pointData['PRM']['id'],
             '#NAME#'=>$pointData['PRM']['name'],
+            '#ADDRESS#'=>$pointData['PRM']['full_address'],
+            '#INFO#'=>$pointData['PRM']['info'],
+            '#PHONE#'=>$pointData['PRM']['phone']
         );
 
         return str_replace(array_keys($templateData),array_values($templateData),$template);
