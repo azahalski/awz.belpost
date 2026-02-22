@@ -1,11 +1,11 @@
 <?php
-$MESS["AWZ_BELPOST_PROFILE_PICKUP_NAME"] = "AWZ: Пункты выдачи Белпочта";
-$MESS["AWZ_BELPOST_PROFILE_PICKUP_DESC"] = "Обработчик доставки Пункты выдачи заказов Белпочта Беларусь";
+$MESS["AWZ_BELPOST_PROFILE_PICKUP_NAME"] = "AWZ: Отделения Белпочты";
+$MESS["AWZ_BELPOST_PROFILE_PICKUP_DESC"] = "Обработчик доставки в Отделения Белпочты Беларусь";
 $MESS["AWZ_BELPOST_PROFILE_PICKUP_SETT_INTG"] = "Интеграция";
 $MESS["AWZ_BELPOST_PROFILE_PICKUP_SETT_INTG_DESC"] = "Основные настройки интеграции";
 $MESS["AWZ_BELPOST_PROFILE_PICKUP_SETT_BTN_CLASS"] = "Класс кнопки выбора ПВЗ";
 $MESS["AWZ_BELPOST_PROFILE_PICKUP_SETT_WEIGHT_DEF"] = "Вес товара в граммах по умолчанию (если не найден вес товара)";
-$MESS["AWZ_BELPOST_PROFILE_PICKUP_BTN_OPEN"] = "Выберите пункт выдачи";
+$MESS["AWZ_BELPOST_PROFILE_PICKUP_BTN_OPEN"] = "Выберите отделение";
 $MESS["AWZ_BELPOST_PROFILE_PICKUP_ERR_REGION"] = "Не указан регион доставки";
 $MESS["AWZ_BELPOST_PROFILE_PICKUP_TARIFS"] = "Опции к тарифам";
 $MESS["AWZ_BELPOST_PROFILE_PICKUP_TARIFS_WEIGHT"] = "Тарифы по весу";
