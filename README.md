@@ -1,8 +1,8 @@
-# awz.europost
+# awz.belpost
 
 <!-- cl-start -->
 ## История версий
 
-https://github.com/zahalski/awz.europost/blob/master/CHANGELOG.md
+https://github.com/azahalski/awz.belpost/blob/master/CHANGELOG.md
 
 <!-- cl-end -->
